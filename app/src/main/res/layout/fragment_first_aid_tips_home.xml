@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.example.healthcare.FirstAidTipsHome">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:id="@+id/fcontent_tab_layout"
+        android:layout_height="wrap_content"
+        android:background="@color/color3"
+        android:elevation="6dp"
+
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        </TableLayout>
+
+    <androidx.core.view.v7.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fcontent_pager">
+    </androidx.core.view.v7.ViewPager>
+
+</LinearLayout>
+    <!--android:tabMaxWidth="0dp"-->
+    <!--android:tabGravity="fill"-->
+    <!--android:tabSelectedTextColor="@android:color/background_dark">-->
