@@ -14,7 +14,7 @@ public class preregister extends AppCompatActivity {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_preregister);
 
-        System.out.println("qqqqqqqqqq");
+//        System.out.println("qqqqqqqqqq");
         Button user=(Button)findViewById (R.id.user);
         Button doc=(Button)findViewById (R.id.doc);
         Button chem=(Button)findViewById (R.id.chem);
@@ -22,8 +22,7 @@ public class preregister extends AppCompatActivity {
         user.setOnClickListener (new View.OnClickListener ( ) {
             @Override
             public void onClick(View view) {
-                Intent reg=new Intent(getApplicationContext(),register.class);
-                reg.putExtra ("who", "user");
+                Intent reg=new Intent(getApplicationContext(),UserReg.class);
                 startActivity(reg);
             }
         });
@@ -31,16 +30,16 @@ public class preregister extends AppCompatActivity {
         doc.setOnClickListener (new View.OnClickListener ( ) {
             @Override
             public void onClick(View view) {
-                Intent reg = new Intent (getApplicationContext (), register.class);
-                reg.putExtra ("who", "doc");
+                Intent reg = new Intent (getApplicationContext (), DocReg.class);
+//                reg.putExtra ("who", "doc");
                 startActivity (reg);
             }
         });
         chem.setOnClickListener (new View.OnClickListener ( ) {
             @Override
             public void onClick(View view) {
-                Intent reg = new Intent (getApplicationContext (), register.class);
-                reg.putExtra ("who", "chem");
+                Intent reg = new Intent (getApplicationContext (), DocReg.class);
+//                reg.putExtra ("who", "chem");
                 startActivity (reg);
             }
         });

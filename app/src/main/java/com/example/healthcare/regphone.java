@@ -9,6 +9,5 @@ public class regphone extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
-        setContentView (R.layout.activity_regphone);
-    }
+        setContentView (R.layout.activity_regphone);    }
 }
