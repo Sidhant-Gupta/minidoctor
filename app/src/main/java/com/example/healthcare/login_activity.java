@@ -49,7 +49,7 @@ public class login_activity extends AppCompatActivity {
             finish();
 
             //TODO: check if it is doc?? or patient?? if doc->maindoc else mainactivity
-            startActivity(new Intent(getApplicationContext(),DocMainActivity.class));
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
         }
 
         tv_log=(TextView) findViewById(R.id.tv_log);

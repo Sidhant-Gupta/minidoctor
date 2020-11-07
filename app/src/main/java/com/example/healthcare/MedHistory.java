@@ -28,7 +28,7 @@ public class MedHistory extends AppCompatActivity implements AdapterContacts.onN
 
         // Generate random integers in range 0 to 4
         int rand_int1 = rand.nextInt(5);
-        String tagline[] = new String[]{"I'm eating because I am bored", "Ways to my heart:Be my Food", "Winner, Winner, Chicken Dinner", "Because my taste buds have become dormant", "Tomorrow we start our diet, promise!"};
+        String tagline[] = new String[]{"We wish you a great Health", "May your day be very prosperous", "Thank you for checking In", "We care for you." "Don't be scared. We are all together"};
         Toast.makeText (this, tagline[rand_int1], Toast.LENGTH_LONG).show ( );
 
         restList = new ArrayList<> ( );
@@ -47,50 +47,33 @@ public class MedHistory extends AppCompatActivity implements AdapterContacts.onN
     public ArrayList<ModelContacts> dataqueue() {
         ArrayList<ModelContacts> holder = new ArrayList<> ( );
         ModelContacts ob1 = new ModelContacts ( );
-        ob1.setHeading ("Barcelo's Grill");
-        ob1.setSubHeading ("Quality non-veg, "+"mandatory picture spot" +
-                "\nRating: 3.7");
+        ob1.setHeading ("Dr. Ajay Gupta");
+        ob1.setSubHeading ("Child Specialist and Healthcare");
         ob1.setImgName (R.drawable.boythree);
 
         holder.add (ob1);
 
 
         ModelContacts ob2 = new ModelContacts ( );
-        ob2.setHeading ("Pizza Hut");
-        ob2.setSubHeading ("Affordable, " + "Nice ambiance"+
-                "\nRating: 4");
+        ob2.setHeading ("Dr. Sidhant Mittal");
+        ob2.setSubHeading ("Neurologist and brain surgeon");
         ob2.setImgName (R.drawable.boythree);
         holder.add (ob2);
 
 
         ModelContacts ob3 = new ModelContacts ( );
-        ob3.setHeading ("The Vintage Cafe");
-        ob3.setSubHeading ("Affordable, " + "Nice ambiance"+
-                "\nRating: 4");
+        ob3.setHeading ("Dr. Pranjal Garg");
+        ob3.setSubHeading ("Neuro surgeon practioner");
         ob3.setImgName (R.drawable.boythree);
         holder.add (ob3);
 
         ModelContacts ob4 = new ModelContacts ( );
-        ob4.setHeading ("C Seven Hotel");
-        ob4.setSubHeading ("Affordable, " + "Nice ambiance"+
-                "\nRating: 4");
+        ob4.setHeading ("Dr. Giri Raj Gupta");
+        ob4.setSubHeading ("Dental Health");
         ob4.setImgName (R.drawable.boythree);
         holder.add (ob4);
 
-        ModelContacts ob5 = new ModelContacts ( );
-        ob5.setHeading ("The Meridien");
-        ob5.setSubHeading ("Affordable, " + "Nice ambiance"+
-                "\nRating: 4");
-        ob5.setImgName (R.drawable.boy);
-        holder.add (ob5);
 
-        ModelContacts ob6 = new ModelContacts ( );
-        ob6.setHeading ("Mezban Hotel and Restaurant");
-        ob6.setSubHeading ("Affordable, " + "Nice ambiance"+
-                "\nRating: 4");
-        ob6.setImgName (R.drawable.boythree);
-        holder.add (ob6);
-        return holder;
 
 
     }
