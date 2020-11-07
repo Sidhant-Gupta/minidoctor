@@ -117,6 +117,7 @@ public class login_activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent reg=new Intent(getApplicationContext(),preregister.class);
+                System.out.println("pppppppppppp");
                 startActivity(reg);
             }
         });

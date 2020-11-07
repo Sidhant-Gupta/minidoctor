@@ -14,6 +14,7 @@ public class preregister extends AppCompatActivity {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_preregister);
 
+        System.out.println("qqqqqqqqqq");
         Button user=(Button)findViewById (R.id.user);
         Button doc=(Button)findViewById (R.id.doc);
         Button chem=(Button)findViewById (R.id.chem);
