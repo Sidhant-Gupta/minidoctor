@@ -116,7 +116,7 @@ public class login_activity extends AppCompatActivity {
         tv_log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent reg=new Intent(getApplicationContext(),register.class);
+                Intent reg=new Intent(getApplicationContext(),preregister.class);
                 startActivity(reg);
             }
         });
@@ -159,6 +159,9 @@ public class login_activity extends AppCompatActivity {
                     if(firebaseAuth.getCurrentUser()!=null){
                         //profile activity here
                         finish();
+
+
+                        //api to node server here!!!!
                         startActivity(new Intent(getApplicationContext(),MainActivity.class));
                     }
 //                                direct to the profile of user
@@ -169,6 +172,8 @@ public class login_activity extends AppCompatActivity {
                 else{
                     Toast.makeText(login_activity.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
                 }
+
+
             }
         });
     }

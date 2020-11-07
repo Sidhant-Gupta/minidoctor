@@ -24,13 +24,16 @@ public class register extends AppCompatActivity {
     ProgressDialog progressDialog;
     FirebaseAuth firebaseAuth;
     TextView tv_signin;
-
+    String client=null;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        Intent intent = getIntent();
+        client = intent.getStringExtra ("who");
 
         progressDialog=new ProgressDialog(this);
         firebaseAuth=FirebaseAuth.getInstance();
@@ -53,40 +56,14 @@ public class register extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 register_user();
-//                String email=et_email.getText().toString().trim();
-//                String password=et_password.getText().toString().trim();
-//
-////              if email is empty do not proceed further
-//
-//                if(TextUtils.isEmpty(email)){
-//                    Toast.makeText(register.this, "Please enter valid email", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
-////              if password is empty
-//                if(TextUtils.isEmpty(password)){
-//                    Toast.makeText(register.this, "Please enter password", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
-//
-//                progressDialog.setMessage("Registering User...");
-//                progressDialog.show();
-//
-//                firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<AuthResult> task) {
-//                            if(task.isSuccessful()){
-////                                direct to the profile of user
-////                                or display message of success
-//                                Toast.makeText(register.this, "Successfully Registered", Toast.LENGTH_SHORT).show();
-//                            }
-//                            else{
-//                                Toast.makeText(register.this, "Could not Register", Toast.LENGTH_SHORT).show();
-//                            }
-//                    }
-//                });
-
-
-
+                if(client.equalsIgnoreCase ("user")){
+//                    Intent detail=new Intent(getApplicationContext(),detailpage.class);
+//                    startActivity(detail);
+                }
+                else if(client.equalsIgnoreCase ("doc")){
+                    Intent login=new Intent(getApplicationContext(),login_activity.class);
+                    startActivity(login);
+                }
             }
         });
     }
@@ -124,6 +101,8 @@ public class register extends AppCompatActivity {
                     Toast.makeText(register.this, "Could not Register", Toast.LENGTH_SHORT).show();
 
                 }
+
+
             }
         });
 

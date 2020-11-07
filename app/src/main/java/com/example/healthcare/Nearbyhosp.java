@@ -48,7 +48,9 @@ public class Nearbyhosp extends Fragment implements GoogleApiClient.ConnectionCa
         GoogleApiClient.OnConnectionFailedListener, OnMapReadyCallback {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String GOOGLE_API_KEY = "AIzaSyDaIj2WpGolg6tmsxBl84YUsah0yD0M148";
+    private static final String GOOGLE_API_KEY = "AIzaSyBtvtP64Ieo9JXXSvMUzP7IELZUS5Ko7BU";
+//
+//            "AIzaSyDaIj2WpGolg6tmsxBl84YUsah0yD0M148";
     //    AIzaSyDw1UQMuXEpU7MUp4RVqekOoOKTsLvgNec
     GoogleMap googleMap;
     double latitude = 0;

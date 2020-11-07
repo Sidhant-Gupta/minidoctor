@@ -92,30 +92,30 @@
                 android:layout_marginTop="-12dp"
                 android:orientation="vertical">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="5dp"
-                    android:layout_height="wrap_content">
-                    <android.support.design.widget.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Name"
-                        android:id="@+id/medname"
-                        android:singleLine="true"/>
-                </com.google.android.material.textfield.TextInputLayout>
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:layout_height="wrap_content">-->
+<!--                    <android.support.design.widget.TextInputEditText-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:hint="Name"-->
+<!--                        android:id="@+id/medname"-->
+<!--                        android:singleLine="true"/>-->
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
 
 
-            <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp">
-                    <android.support.design.widget.TextInputEditText
-                        android:id="@+id/medinf"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Instructions"
-                        />
-                </com.google.android.material.textfield.TextInputLayout>
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="5dp">-->
+<!--                    <android.support.design.widget.TextInputEditText-->
+<!--                        android:id="@+id/medinf"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:hint="Instructions"-->
+<!--                        />-->
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
             </LinearLayout>
             <RelativeLayout
                 android:layout_width="match_parent"

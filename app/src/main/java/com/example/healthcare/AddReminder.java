@@ -44,8 +44,9 @@ public class AddReminder extends AppCompatActivity implements View.OnClickListen
         // weekday=(CheckBox) findViewById(R.id.weekday);
         back=(ImageView) findViewById(R.id.back_add_reminder);
         frequency_rl = (RelativeLayout) findViewById(R.id.frequency_rl);
-        medinfo=(TextView)findViewById(R.id.medinf);
-        medname=(TextView)findViewById(R.id.medname);
+//        medinfo=(TextView)findViewById(R.id.medinf);
+//        medname=(TextView)findViewById(R.id.medname);
+        medinfo.setText ("Pikachu"); medname.setText ("Raichu");
         interval = (Spinner)findViewById(R.id.interval);
         times = (Spinner)findViewById(R.id.times);
         time_unit = (Spinner)findViewById(R.id.time_unit);
