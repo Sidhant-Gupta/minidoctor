@@ -1,16 +1,24 @@
 package com.example.healthcare;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.Toast;
+import com.example.healthcare.RetrofitModel.ModelMedHistory;
+import com.example.healthcare.RetrofitModel.RetrofitApi;
 
 import java.util.ArrayList;
 import java.util.Random;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MedHistory extends AppCompatActivity implements AdapterContacts.onNoteListener{
 
@@ -46,6 +54,29 @@ public class MedHistory extends AppCompatActivity implements AdapterContacts.onN
 
     public ArrayList<ModelContacts> dataqueue() {
         ArrayList<ModelContacts> holder = new ArrayList<> ( );
+        Retrofit retrofit=new Retrofit.Builder()
+                .baseUrl(RetrofitApi.BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        RetrofitApi api=retrofit.create(RetrofitApi.class);
+        Call<ModelMedHistory> call=api.getallPrescriptions(1);
+        System.out.println("pqpqpqpqpqpq holllllllllllaaaaaaaaaaaa");
+        call.enqueue(new Callback<ModelMedHistory>() {
+            @Override
+            public void onResponse(Call<ModelMedHistory> call, Response<ModelMedHistory> response) {
+                System.out.println("sssssssssssssssssss holllllllllllaaaaaaaaaaaa");
+                ModelMedHistory medHistory=response.body();
+
+               System.out.println("sssssssssssssssssss "+medHistory);
+            }
+
+            @Override
+            public void onFailure(Call<ModelMedHistory> call, Throwable t) {
+                System.out.println("ERoorrrr "+t.getMessage());
+                Toast.makeText(getApplicationContext(),t.getMessage(),Toast.LENGTH_SHORT).show();
+            }
+        });
+
         ModelContacts ob1 = new ModelContacts ( );
         ob1.setHeading ("Barcelo's Grill");
         ob1.setSubHeading ("Quality non-veg, "+"mandatory picture spot" +
