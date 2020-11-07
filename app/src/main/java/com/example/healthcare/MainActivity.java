@@ -162,6 +162,10 @@ public class MainActivity extends AppCompatActivity
             return true;
         }
 
+        else if(id == R.id.history){
+            startActivity (new Intent (this, MedHistory.class));
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 

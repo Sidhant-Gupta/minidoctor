@@ -8,7 +8,12 @@
         android:label="Health Care"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DocReg"></activity>
+        <activity android:name=".PatientDocsActivity"></activity>
+        <activity android:name=".Prescribe" />
+        <activity android:name=".AddUser" />
+        <activity android:name=".DocMainActivity" />
+        <activity android:name=".MedHistory" />
+        <activity android:name=".DocReg" />
         <activity android:name=".UserReg" />
         <activity android:name=".regphone" />
         <activity android:name=".preregister" />

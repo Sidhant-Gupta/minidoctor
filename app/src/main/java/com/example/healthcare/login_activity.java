@@ -41,28 +41,15 @@ public class login_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_activity);
 
-
-
-
-
-//        SharedPreferences preferences= getSharedPreferences("checkbox",MODE_PRIVATE);
-//        String checkbox= preferences.getString("remember","");
-//        if(checkbox.equals("true")){
-//            Intent intent=new Intent(getApplicationContext(),MainActivity.class);
-//            startActivity(intent);
-//
-//        }
-//        else{
-//
-//        }
-
         progressDialog=new ProgressDialog(this);
         firebaseAuth=FirebaseAuth.getInstance();
 
         if(firebaseAuth.getCurrentUser()!=null){
             //profile activity here
             finish();
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+
+            //TODO: check if it is doc?? or patient?? if doc->maindoc else mainactivity
+            startActivity(new Intent(getApplicationContext(),DocMainActivity.class));
         }
 
         tv_log=(TextView) findViewById(R.id.tv_log);

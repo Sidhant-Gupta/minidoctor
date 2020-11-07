@@ -20,11 +20,11 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class DocReg extends AppCompatActivity {
     Button btn_register;
-    EditText et_email,et_password;
+    EditText et_email,et_password,doc_id;
     ProgressDialog progressDialog;
     FirebaseAuth firebaseAuth;
     TextView tv_signin;
-    String client=null;
+
 
 
     @Override
@@ -40,6 +40,7 @@ public class DocReg extends AppCompatActivity {
         et_email=(EditText) findViewById(R.id.et_email_login);
         et_password=(EditText) findViewById(R.id.et_pas_login);
         tv_signin=(TextView) findViewById(R.id.tv_signin);
+        doc_id=(EditText)findViewById (R.id.doc_id);
 
         tv_signin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,14 +56,11 @@ public class DocReg extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 register_user();
-                if(client.equalsIgnoreCase ("user")){
-//                    Intent detail=new Intent(getApplicationContext(),detailpage.class);
-//                    startActivity(detail);
-                }
-                else if(client.equalsIgnoreCase ("doc")){
-                    Intent login=new Intent(getApplicationContext(),login_activity.class);
-                    startActivity(login);
-                }
+
+                //TODO: api to provide the unique id of doc
+                Intent login=new Intent(getApplicationContext(),login_activity.class);
+                startActivity(login);
+
             }
         });
     }

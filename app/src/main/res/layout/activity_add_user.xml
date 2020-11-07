@@ -1,0 +1,79 @@
+<RelativeLayout android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlayout"
+    tools:context=".AddUser">
+
+    <TextView
+        android:id="@+id/tooltv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Add User"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:background="@color/red"
+        android:textColor="@color/color0"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tooltv"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="23dp"
+        android:text="Patient Id:" />
+
+    <EditText
+        android:id="@+id/ayush"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:hint="Enter Ayushman ID of the Patient"
+        android:layout_marginLeft="30dp"/>
+
+    <Button
+        android:id="@+id/verify_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verify"
+        android:layout_below="@+id/ayush"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/status_verify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verified/NotVerified Status yaha fetch hoga tabhi access docs activate hoga"
+        android:layout_marginTop="40dp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/verify_btn"/>
+    <Button
+        android:id="@+id/puranedocs_btn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@color/color5"
+        android:text="Access Prior Documents"
+        android:layout_below="@+id/status_verify"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="30dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/prescribe_btn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@color/color5"
+        android:text="Prescribe"
+        android:layout_below="@+id/puranedocs_btn"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>
