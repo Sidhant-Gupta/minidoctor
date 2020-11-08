@@ -9,9 +9,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.healthcare.RetrofitModel.ModelMedHistory;
+import com.example.healthcare.RetrofitModel.ModelPrescriptions;
 import com.example.healthcare.RetrofitModel.RetrofitApi;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import retrofit2.Call;
@@ -25,6 +27,11 @@ public class MedHistory extends AppCompatActivity implements AdapterContacts.onN
     private AdapterContacts adapter;
     private RecyclerView recyclerView;
     ArrayList<ModelContacts> restList;
+
+
+    interface DataReceivedListener{
+        void onDataReceived(ArrayList<ModelContacts> timetable);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,8 +73,22 @@ public class MedHistory extends AppCompatActivity implements AdapterContacts.onN
             public void onResponse(Call<ModelMedHistory> call, Response<ModelMedHistory> response) {
                 System.out.println("sssssssssssssssssss holllllllllllaaaaaaaaaaaa");
                 ModelMedHistory medHistory=response.body();
+                List<ModelPrescriptions> appointments=new ArrayList<ModelPrescriptions>();
+                appointments=medHistory.getPrescriptionsAll();
 
-               System.out.println("sssssssssssssssssss "+medHistory);
+                ArrayList<ModelContacts> holder1 = new ArrayList<> ( );
+                for (int i = 0; i < appointments.size(); i++) {
+                    System.out.println("sssssssssssssssssss " + appointments.get(0).getDoctorName());
+                    ModelContacts ob1 = new ModelContacts ( );
+                    ob1.setHeading (appointments.get(i).getDoctorName());
+                    ob1.setSubHeading (appointments.get(i).getTimestamp() +
+                            "\n"+appointments.get(i).getTitle());
+                    ob1.setImgName (R.drawable.boythree);
+
+                    holder1.add (ob1);
+                }
+                onDataRecieved(holder1);
+
             }
 
             @Override
@@ -77,53 +98,59 @@ public class MedHistory extends AppCompatActivity implements AdapterContacts.onN
             }
         });
 
-        ModelContacts ob1 = new ModelContacts ( );
-        ob1.setHeading ("Barcelo's Grill");
-        ob1.setSubHeading ("Quality non-veg, "+"mandatory picture spot" +
-                "\nRating: 3.7");
-        ob1.setImgName (R.drawable.boythree);
-
-        holder.add (ob1);
-
-
-        ModelContacts ob2 = new ModelContacts ( );
-        ob2.setHeading ("Pizza Hut");
-        ob2.setSubHeading ("Affordable, " + "Nice ambiance"+
-                "\nRating: 4");
-        ob2.setImgName (R.drawable.boythree);
-        holder.add (ob2);
+//        ModelContacts ob1 = new ModelContacts ( );
+//        ob1.setHeading ("Barcelo's Grill");
+//        ob1.setSubHeading ("Quality non-veg, "+"mandatory picture spot" +
+//                "\nRating: 3.7");
+//        ob1.setImgName (R.drawable.boythree);
+//
+//        holder.add (ob1);
 
 
-        ModelContacts ob3 = new ModelContacts ( );
-        ob3.setHeading ("The Vintage Cafe");
-        ob3.setSubHeading ("Affordable, " + "Nice ambiance"+
-                "\nRating: 4");
-        ob3.setImgName (R.drawable.boythree);
-        holder.add (ob3);
-
-        ModelContacts ob4 = new ModelContacts ( );
-        ob4.setHeading ("C Seven Hotel");
-        ob4.setSubHeading ("Affordable, " + "Nice ambiance"+
-                "\nRating: 4");
-        ob4.setImgName (R.drawable.boythree);
-        holder.add (ob4);
-
-        ModelContacts ob5 = new ModelContacts ( );
-        ob5.setHeading ("The Meridien");
-        ob5.setSubHeading ("Affordable, " + "Nice ambiance"+
-                "\nRating: 4");
-        ob5.setImgName (R.drawable.boy);
-        holder.add (ob5);
-
-        ModelContacts ob6 = new ModelContacts ( );
-        ob6.setHeading ("Mezban Hotel and Restaurant");
-        ob6.setSubHeading ("Affordable, " + "Nice ambiance"+
-                "\nRating: 4");
-        ob6.setImgName (R.drawable.boythree);
-        holder.add (ob6);
+//        ModelContacts ob2 = new ModelContacts ( );
+//        ob2.setHeading ("Pizza Hut");
+//        ob2.setSubHeading ("Affordable, " + "Nice ambiance"+
+//                "\nRating: 4");
+//        ob2.setImgName (R.drawable.boythree);
+//        holder.add (ob2);
+//
+//
+//        ModelContacts ob3 = new ModelContacts ( );
+//        ob3.setHeading ("The Vintage Cafe");
+//        ob3.setSubHeading ("Affordable, " + "Nice ambiance"+
+//                "\nRating: 4");
+//        ob3.setImgName (R.drawable.boythree);
+//        holder.add (ob3);
+//
+//        ModelContacts ob4 = new ModelContacts ( );
+//        ob4.setHeading ("C Seven Hotel");
+//        ob4.setSubHeading ("Affordable, " + "Nice ambiance"+
+//                "\nRating: 4");
+//        ob4.setImgName (R.drawable.boythree);
+//        holder.add (ob4);
+//
+//        ModelContacts ob5 = new ModelContacts ( );
+//        ob5.setHeading ("The Meridien");
+//        ob5.setSubHeading ("Affordable, " + "Nice ambiance"+
+//                "\nRating: 4");
+//        ob5.setImgName (R.drawable.boy);
+//        holder.add (ob5);
+//
+//        ModelContacts ob6 = new ModelContacts ( );
+//        ob6.setHeading ("Mezban Hotel and Restaurant");
+//        ob6.setSubHeading ("Affordable, " + "Nice ambiance"+
+//                "\nRating: 4");
+//        ob6.setImgName (R.drawable.boythree);
+//        holder.add (ob6);
         return holder;
+    }
 
-
+    public void onDataRecieved(ArrayList<ModelContacts> restList){
+        System.out.println("On DATAA Recieved");
+        recyclerView = (RecyclerView) findViewById (R.id.rv_contactDep);
+        recyclerView.setLayoutManager (new LinearLayoutManager (this));
+        adapter = new AdapterContacts (this, restList, this);
+        recyclerView.setAdapter (adapter);
     }
 
     @Override
