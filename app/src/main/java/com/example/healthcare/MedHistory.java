@@ -43,7 +43,7 @@ public class MedHistory extends AppCompatActivity implements AdapterContacts.onN
 
         // Generate random integers in range 0 to 4
         int rand_int1 = rand.nextInt(5);
-        String tagline[] = new String[]{"I'm eating because I am bored", "Ways to my heart:Be my Food", "Winner, Winner, Chicken Dinner", "Because my taste buds have become dormant", "Tomorrow we start our diet, promise!"};
+        String tagline[] = new String[]{"We wish you a great Health", "May your day be very prosperous", "Thank you for checking In", "We care for you.", "Don't be scared. We are all together"};
         Toast.makeText (this, tagline[rand_int1], Toast.LENGTH_LONG).show ( );
 
         restList = new ArrayList<> ( );
@@ -61,6 +61,7 @@ public class MedHistory extends AppCompatActivity implements AdapterContacts.onN
 
     public ArrayList<ModelContacts> dataqueue() {
         ArrayList<ModelContacts> holder = new ArrayList<> ( );
+
         Retrofit retrofit=new Retrofit.Builder()
                 .baseUrl(RetrofitApi.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -82,7 +83,7 @@ public class MedHistory extends AppCompatActivity implements AdapterContacts.onN
                     ModelContacts ob1 = new ModelContacts ( );
                     ob1.setHeading (appointments.get(i).getDoctorName());
                     ob1.setSubHeading (appointments.get(i).getTimestamp() +
-                            "\n"+appointments.get(i).getTitle());
+                            "\nProblem-`"+appointments.get(i).getTitle());
                     ob1.setImgName (R.drawable.boythree);
 
                     holder1.add (ob1);

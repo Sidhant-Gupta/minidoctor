@@ -5,8 +5,25 @@
     tools:context=".Prescribe">
 
     <EditText
+        android:id="@+id/editText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:hint="Enter the subject"/>
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true"
+        android:text="Done"/>
+
+    <ListView
+        android:id="@+id/lview"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/btn2"
+        android:layout_height="wrap_content"
+        />
 
 
 </RelativeLayout>

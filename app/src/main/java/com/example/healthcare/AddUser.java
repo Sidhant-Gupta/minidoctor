@@ -20,9 +20,16 @@ public class AddUser extends AppCompatActivity {
 
         Button verify=findViewById (R.id.verify_btn);
         Button puranedocs=(Button)findViewById (R.id.puranedocs_btn);
-        TextView status = findViewById (R.id.status_verify);
+        final TextView status = findViewById (R.id.status_verify);
         Button prescribedocs=findViewById (R.id.prescribe_btn);
         //TODO: activate button only if status==verified
+
+        verify.setOnClickListener (new View.OnClickListener ( ) {
+            @Override
+            public void onClick(View view) {
+                status.setText ("Verified");
+            }
+        });
 
         puranedocs.setOnClickListener (new View.OnClickListener ( ) {
             @Override

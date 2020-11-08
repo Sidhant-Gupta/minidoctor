@@ -9,10 +9,24 @@
     android:paddingLeft="18dp"
     android:paddingRight="18dp"
     android:paddingTop="18dp"
+    android:background="@drawable/bg"
     tools:context="com.example.healthcare.Splash">
+
     <ImageView
-        android:layout_width="170dp"
-        android:layout_height="170dp"
-        android:src="@drawable/splash1"
-        />
+        android:id="@+id/pic"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:gravity="center"
+
+        android:src="@drawable/splash_pic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pic"
+
+        android:layout_marginLeft="100dp"
+        android:textSize="33dp"
+        android:text="HealthKit"
+        android:textColor="@color/color0" />
 </RelativeLayout>

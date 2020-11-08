@@ -150,7 +150,7 @@ public class login_activity extends AppCompatActivity {
 
 
                         //api to node server here!!!!
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        startActivity(new Intent(getApplicationContext(),DocMainActivity.class));
                     }
 //                                direct to the profile of user
 //                                or display message of success
