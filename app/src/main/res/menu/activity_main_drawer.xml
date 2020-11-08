@@ -22,7 +22,7 @@
             android:title="First Aid Tips" />
 
         <item
-            android:id="@+id/nav_hosp"
+            android:id="@+id/personal"
             android:icon="@drawable/ic_chevron_right_black_24dp"
             android:title="Personal Record" />
 

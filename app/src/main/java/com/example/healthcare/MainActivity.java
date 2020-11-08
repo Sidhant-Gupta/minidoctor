@@ -187,9 +187,8 @@ public class MainActivity extends AppCompatActivity
             getSupportFragmentManager().beginTransaction().replace(R.id.container,ft).commit();
 
 
-        } else if (id == R.id.nav_hosp) {
-            Nearbyhosp nh=new Nearbyhosp();
-            getSupportFragmentManager().beginTransaction().replace(R.id.container,nh).commit();
+        } else if (id == R.id.personal) {
+            startActivity(new Intent(getApplicationContext(),PersonalInfo.class));
 
 
         } else if (id == R.id.nav_medinfo) {

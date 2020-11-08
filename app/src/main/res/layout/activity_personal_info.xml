@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+tools:context=".PersonalInfo">
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cv_contactDep"
+    android:layout_centerHorizontal="true"
+    app:cardBackgroundColor="#ffffff"
+    app:cardCornerRadius="25dp"
+    app:cardElevation="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/girlone"
+            android:id="@+id/img_contact" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_heading"
+            android:text="Hi Sejal"
+
+            android:layout_toRightOf="@+id/img_contact"
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp"
+            android:textColor="#000000" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_subheading"
+            android:text="Hope you are healthy and fit "
+            android:layout_toRightOf="@+id/img_contact"
+            android:layout_below="@+id/tv_heading"
+            android:layout_marginLeft="10dp"
+            android:textSize="13dp" />
+
+
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/gender"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/img_contact"
+            android:id="@+id/img_feedback" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_fback"
+            android:text="Gender"
+
+            android:layout_toRightOf="@+id/img_feedback"
+            android:layout_below="@+id/img_contact"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_fbackdesc"
+            android:text="Female"
+            android:layout_marginLeft="10dp"
+
+            android:layout_toRightOf="@+id/img_bug"
+            android:layout_below="@+id/tv_fback"
+            android:textSize="12dp" />
+
+
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/age"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/img_feedback"
+            android:id="@+id/img_bug" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_bug"
+            android:text="Age"
+
+            android:layout_toRightOf="@+id/img_bug"
+            android:layout_below="@+id/img_feedback"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_bugdesc"
+            android:text="21"
+            android:layout_marginLeft="10dp"
+
+            android:layout_toRightOf="@+id/img_bug"
+            android:layout_below="@+id/tv_bug"
+            android:textSize="12dp" />
+
+
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/age"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/img_bug"
+            android:id="@+id/img_weight" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_weight"
+            android:text="Weight"
+
+            android:layout_toRightOf="@+id/img_weight"
+            android:layout_below="@+id/img_bug"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_weightdesc"
+            android:text="55kg"
+            android:layout_marginLeft="10dp"
+
+            android:layout_toRightOf="@+id/img_weight"
+            android:layout_below="@+id/tv_weight"
+            android:textSize="12dp" />
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/age"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/img_weight"
+            android:id="@+id/img_temperature" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_temperature"
+            android:text="Temperature"
+
+            android:layout_toRightOf="@+id/img_temperature"
+            android:layout_below="@+id/img_weight"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_tempdesc"
+            android:text="98.6 F"
+            android:layout_marginLeft="10dp"
+
+            android:layout_toRightOf="@+id/img_temperature"
+            android:layout_below="@+id/tv_temperature"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/tempright"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/img_weight"
+            android:layout_toRightOf="@+id/tv_temperature"
+            android:layout_marginHorizontal="10dp"
+            android:id="@+id/img_temperaturecheck" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/cv_team"
+            android:layout_centerHorizontal="true"
+            app:cardBackgroundColor="#ffffff"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/cv_contactDep"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+                <TextView
+                    android:id="@+id/tv_ayush"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Ayushman Bharat Scheme"
+                    android:textColor="#000000"
+                    android:textSize="22dp"/>
+
+                <TextView
+                    android:id="@+id/tv_amt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Amount Redeemed: 4988/-"
+                    android:textSize="20dp"
+                    android:layout_below="@id/tv_ayush"
+                    android:layout_marginVertical="10dp"
+                    />
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
