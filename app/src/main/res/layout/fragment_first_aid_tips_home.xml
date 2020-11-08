@@ -18,11 +18,11 @@
 
         </TableLayout>
 
-    <androidx.core.view.v7.ViewPager
+    <androidx.viewPager.widget.ViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/fcontent_pager">
-    </androidx.core.view.v7.ViewPager>
+    </androidx.viewPager.widget.ViewPager>
 
 </LinearLayout>
     <!--android:tabMaxWidth="0dp"-->

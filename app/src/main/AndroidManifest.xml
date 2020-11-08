@@ -10,7 +10,6 @@
         android:theme="@style/AppTheme">
         <activity android:name=".PatientDocsActivity"></activity>
         <activity android:name=".Prescribe" />
-        <activity android:name=".AddUser" />
         <activity android:name=".DocMainActivity" />
         <activity android:name=".MedHistory" />
         <activity android:name=".DocReg" />
@@ -55,6 +54,10 @@
         <activity
             android:name=".AddReminder"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity
+            android:name=".AddUser"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".FirstAidContent"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
@@ -65,7 +68,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDaIj2WpGolg6tmsxBl84YUsah0yD0M148" />
+            android:value="AIzaSyAY5__uOUHx-bkEB9ToFgw6vXjumi5jY1I" />
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

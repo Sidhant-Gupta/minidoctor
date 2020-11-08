@@ -28,7 +28,7 @@ public class MedHistory extends AppCompatActivity implements AdapterContacts.onN
 
         // Generate random integers in range 0 to 4
         int rand_int1 = rand.nextInt(5);
-        String tagline[] = new String[]{"We wish you a great Health", "May your day be very prosperous", "Thank you for checking In", "We care for you." "Don't be scared. We are all together"};
+        String tagline[] = new String[]{"We wish you a great Health", "May your day be very prosperous", "Thank you for checking In", "We care for you.", "Don't be scared. We are all together"};
         Toast.makeText (this, tagline[rand_int1], Toast.LENGTH_LONG).show ( );
 
         restList = new ArrayList<> ( );
@@ -73,7 +73,7 @@ public class MedHistory extends AppCompatActivity implements AdapterContacts.onN
         ob4.setImgName (R.drawable.boythree);
         holder.add (ob4);
 
-
+    return holder;
 
 
     }
