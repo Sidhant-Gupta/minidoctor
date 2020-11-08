@@ -10,11 +10,11 @@ The aim of this project focuses on connecting the dots between the patients, doc
 
 **Link to respective repos:**<br/><br/>
 
-**Backend Project**: 
+**Backend Project**: <br/>
 https://github.com/Sidhant-Gupta/healthBackend
 
-**Frontend Project**:  
+**Frontend Project**: <br/>
 https://github.com/Sidhant-Gupta/minidoctor (the current repo)
 
-**Screenshots and Powerpoint Presentation at:**
+**Screenshots and Powerpoint Presentation at:**<br/>
 https://docs.google.com/presentation/d/1-nA0eTx2-ZHMAtdJ7AtRzgHxB_emzqQcA-L1CA-x-1A/edit?usp=sharing
